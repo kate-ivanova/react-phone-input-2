@@ -232,7 +232,7 @@ class PhoneInput extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.showDropdown !== this.state.showDropdown && this.props.onDropdownVisibilityChange) {
-      this.props.onDropdownVisibilityChange(this.state.showDropdown(this.state.showDropdown));
+      this.props.onDropdownVisibilityChange(this.state.showDropdown);
     }
   }
 
