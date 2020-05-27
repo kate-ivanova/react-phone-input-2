@@ -24,7 +24,7 @@ import 'react-phone-input-2/lib/style.css'
   onChange={phone => this.setState({ phone })}
 />
 ```
-**available styles** - style • high-res • material • bootstrap • semantic-ui • plain
+**available styles** - style • high-res • material • bootstrap • semantic-ui • plain • emoji
 
 #### [Demo 1 (UI)](https://bl00mber.github.io/react-phone-input-2.html) - [Demo 2 (CSS)](https://bl00mber.github.io/react-phone-input-2-css.html)
 
