@@ -48,6 +48,7 @@ declare module "react-phone-input-2" {
       countries: object[],
       hiddenAreaCodes: object[],
     ) => boolean | string) | boolean;
+    onDropdownVisibilityChange?(isVisible: boolean): void;
   }
 
   export interface PhoneInputProps extends PhoneInputEventsProps, Style {

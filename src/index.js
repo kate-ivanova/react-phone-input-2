@@ -83,6 +83,7 @@ class PhoneInput extends React.Component {
     onBlur: PropTypes.func,
     onClick: PropTypes.func,
     onKeyDown: PropTypes.func,
+    onDropdownVisibilityChange: PropTypes.func,
     isValid: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.func,
@@ -226,6 +227,12 @@ class PhoneInput extends React.Component {
   componentWillUnmount() {
     if (document.removeEventListener && this.props.enableClickOutside) {
       document.removeEventListener('mousedown', this.handleClickOutside);
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.showDropdown !== this.state.showDropdown && this.props.onDropdownVisibilityChange) {
+      this.props.onDropdownVisibilityChange(this.state.showDropdown(this.state.showDropdown));
     }
   }
 
